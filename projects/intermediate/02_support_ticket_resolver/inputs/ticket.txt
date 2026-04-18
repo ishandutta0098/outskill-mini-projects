@@ -1,0 +1,27 @@
+Ticket #48721
+Submitted: 2026-04-12 09:14 UTC
+Customer: Asha Menon (Pro plan, account 11293)
+Product: PostgreSQL-backed analytics dashboard, web app
+Priority: P2
+
+Subject: Dashboard exports to CSV are truncated at 1,000 rows since last week's update
+
+Hi support,
+
+Until last Wednesday I could export the full event log from the "Sessions" view as a CSV
+and the file would contain everything that matched my filter (typically 8k-12k rows per
+day). Since the 2026-04-08 release, every export silently stops at exactly 1,000 rows. There
+is no error in the UI - the file just ends and the row count in the dashboard footer no longer
+matches the file.
+
+I've checked:
+- It happens in Chrome 128 and Firefox 124, on macOS Sonoma.
+- It happens whether I export from a saved view or a fresh filter.
+- It happens for two different teammates on my workspace.
+- The "Download all" toggle is enabled in workspace settings.
+
+This is blocking a weekly compliance report I have to submit every Friday. Can you confirm
+this is a known issue from the 2026-04-08 release and tell me how to get the full export back?
+
+Thanks,
+Asha
