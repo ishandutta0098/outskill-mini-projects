@@ -1,0 +1,11 @@
+{
+  "owner": "Riya Mehta",
+  "base_currency": "usd",
+  "risk_profile": "moderate",
+  "holdings": [
+    { "coin_id": "bitcoin", "symbol": "BTC", "amount": 0.42 },
+    { "coin_id": "ethereum", "symbol": "ETH", "amount": 6.5 },
+    { "coin_id": "solana", "symbol": "SOL", "amount": 120 },
+    { "coin_id": "chainlink", "symbol": "LINK", "amount": 850 }
+  ]
+}
