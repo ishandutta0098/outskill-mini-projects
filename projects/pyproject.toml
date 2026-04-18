@@ -1,0 +1,6 @@
+[project]
+name = "outskill-mini-projects"
+version = "0.1.0"
+description = "30 mini projects across beginner/intermediate/advanced CrewAI tiers"
+requires-python = ">=3.12"
+dependencies = []
