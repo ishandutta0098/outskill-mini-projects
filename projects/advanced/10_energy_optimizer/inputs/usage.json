@@ -1,0 +1,19 @@
+{
+  "household": "Sharma residence, Bengaluru",
+  "country": "IN",
+  "city": "Bengaluru",
+  "latitude": 12.9716,
+  "longitude": 77.5946,
+  "tariff_inr_per_kwh": 9.5,
+  "monthly_kwh_avg": 540,
+  "billing_period_days": 30,
+  "appliances": [
+    { "name": "Split AC 1.5T (bedroom)", "rated_watts": 1500, "daily_hours": 6 },
+    { "name": "Refrigerator 250L", "rated_watts": 150, "daily_hours": 24 },
+    { "name": "Geyser 15L", "rated_watts": 2000, "daily_hours": 1 },
+    { "name": "Washing machine", "rated_watts": 500, "daily_hours": 1 },
+    { "name": "LED lighting (whole home)", "rated_watts": 120, "daily_hours": 6 },
+    { "name": "TV + set-top box", "rated_watts": 130, "daily_hours": 4 },
+    { "name": "Desktop + monitors (WFH)", "rated_watts": 350, "daily_hours": 8 }
+  ]
+}
