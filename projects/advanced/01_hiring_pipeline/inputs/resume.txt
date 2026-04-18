@@ -1,0 +1,31 @@
+Aarav Krishnan
+Bengaluru, India | aarav.krishnan@example.com | +91-98xxxxxx12 | github.com/aaravk
+
+Summary
+Senior backend engineer with 8 years of experience building developer tooling and SDKs in
+TypeScript, Node.js, and Rust. Shipped open-source build tooling used by 12k weekly developers.
+Comfortable with edge runtimes, profiling, and large-scale code reviews. Looking for a senior IC
+role on a high-leverage developer experience team.
+
+Experience
+- 2022 - present: Senior Software Engineer, Hasura (Remote)
+  - Owned the Node.js SDK and the CLI from RFC to release.
+  - Reduced p95 cold start of CLI commands from 1.4s to 380ms via Rust-backed prebuilt binaries.
+  - Drove a cross-team RFC for engine -> SDK protocol versioning across 5 teams.
+- 2019 - 2022: Software Engineer, Razorpay (Bengaluru)
+  - Built the developer portal and API explorer (Next.js + TypeScript).
+  - Shipped the OpenAPI -> client SDK pipeline used to generate 6 official SDKs.
+- 2017 - 2019: Software Engineer, Freshworks (Bengaluru)
+  - Worked on the Freshdesk apps platform; built the local dev sandbox.
+
+Open source
+- Author of `tinybundle`, a TypeScript bundler with Rust internals (12k weekly downloads).
+- Contributor to esbuild plugins ecosystem.
+- Speaker at ReactIndia 2024 and JSNation 2025.
+
+Education
+- B.Tech, Computer Science, IIT Madras (2013 - 2017).
+
+Skills
+TypeScript, Node.js, Rust, Next.js, edge runtimes, esbuild, performance profiling, OSS maintenance,
+RFC writing, mentoring.
