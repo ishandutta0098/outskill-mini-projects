@@ -1,0 +1,31 @@
+Role: Senior Software Engineer, Developer Tools (Remote, EMEA-friendly)
+Company: Vercel
+Posted: 2026-04-05
+
+About the role
+We're growing the Developer Experience team that owns the CLI, local dev server, and
+Vercel SDK. Our customers are millions of frontend and full-stack developers, and the bar
+for delight is extremely high. You'll own areas of the codebase end to end, from RFC to
+release.
+
+What you'll do
+- Design and ship features in the Vercel CLI and SDK in TypeScript and Rust.
+- Profile and improve cold-start, build, and deploy performance.
+- Drive RFCs that touch our edge runtime, framework adapters, and CI integrations.
+- Mentor mid-level engineers and review production-critical PRs.
+
+Must-haves
+- 6+ years building developer tools, infra SDKs, or compilers.
+- Deep TypeScript / Node.js experience; comfort reading Rust.
+- Demonstrated record of shipping OSS or internal frameworks used by 1000+ developers.
+- Strong writing - you can drive an RFC across 5+ teams.
+
+Nice-to-haves
+- Experience with Next.js, Turbopack, esbuild, or Vite internals.
+- Past work on edge / serverless runtimes.
+- Speaker / writer presence in the JS ecosystem.
+
+What we offer
+- Competitive salary + equity, fully remote within EMEA time zones.
+- Annual learning stipend and conference budget.
+- Direct collaboration with the framework teams that ship the tools you'll build on.
