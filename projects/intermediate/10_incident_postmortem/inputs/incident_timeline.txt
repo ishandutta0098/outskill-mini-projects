@@ -1,0 +1,30 @@
+Incident: INC-2026-04-09-PROD-CHECKOUT
+Severity: SEV-1
+Status: Resolved
+Detection: Datadog synthetic monitor + customer reports
+Customer impact: 24 minutes of total checkout failure on web; 41% of mobile checkouts also failed during the window. Estimated GMV loss: $182,400.
+
+Timeline (UTC, on-call: Maya R., IM: Aarav S.):
+
+14:02 - Datadog synthetic on /checkout starts failing with HTTP 500.
+14:03 - PagerDuty pages on-call (Maya R.). Alert acknowledged.
+14:04 - First customer support tickets start arriving citing "Card declined" on a working card.
+14:06 - Maya opens incident channel #inc-checkout-2026-04-09 and pages IM (Aarav S.).
+14:08 - Aarav declares SEV-1, comms posted to status page: "Investigating elevated checkout errors."
+14:11 - Logs show ConnectionPoolTimeout on the payments service connecting to Postgres primary.
+14:13 - DB team confirms Postgres primary CPU at 100%, sustained.
+14:15 - Maya correlates the spike to a recent deploy (16:55 IST / 11:25 UTC) that introduced a new "estimate tax" call inside the checkout transaction.
+14:18 - Roll-forward attempted: revert PR auto-merged after CI passed; deploy starts.
+14:21 - Revert deploy reaches production. Connection pool drains.
+14:24 - Datadog synthetic recovers. Customer reports stop within 2 minutes.
+14:26 - Status page updated: "Identified, fix deployed."
+14:35 - Sustained green for 11 minutes; status page closed.
+14:55 - Incident channel snapshotted.
+
+Notes captured live:
+- The bad change added an N+1 query to the tax service on every line item.
+- The tax service held a Postgres transaction open while waiting on a 3rd-party call (avg 800ms).
+- No load test was run for the change. PR shipped with one approval.
+- Pool size on payments service: 30. Average concurrent checkouts in the window: ~210.
+- Status page first update lagged the page by 6 minutes.
+- Status page final "Resolved" came 9 minutes after sustained green.
