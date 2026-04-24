@@ -9,7 +9,7 @@ function Node({
 }: {
   label: string;
   accent: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
   children: React.ReactNode;
   className?: string;
 }) {

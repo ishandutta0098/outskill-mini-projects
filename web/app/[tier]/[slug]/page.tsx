@@ -7,6 +7,7 @@ import { findProject, PROJECTS } from "@/lib/projects/registry";
 import { StatusChip } from "@/components/StatusChip";
 import { TierBadge } from "@/components/TierBadge";
 import { PipelineDiagram } from "@/components/PipelineDiagram";
+import { AgentArchDiagram } from "@/components/AgentArchDiagram";
 import { DemoPlayground } from "@/components/DemoPlayground";
 
 const VALID = new Set(TIER_ORDER);
@@ -110,7 +111,11 @@ export default async function ProjectPage({
               ARCHITECTURE
             </h2>
           </div>
-          <PipelineDiagram steps={project.pipeline} accent={meta.accent} />
+          {project.slug === "hate-speech-detector" ? (
+            <AgentArchDiagram accent={meta.accent} />
+          ) : (
+            <PipelineDiagram steps={project.pipeline} accent={meta.accent} />
+          )}
         </div>
       </section>
 
