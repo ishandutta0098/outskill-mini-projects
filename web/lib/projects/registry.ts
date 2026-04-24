@@ -24,6 +24,7 @@ import { project as i08 } from "./intermediate/08-podcast-show-notes";
 import { project as i09 } from "./intermediate/09-real-estate-analyzer";
 import { project as i10 } from "./intermediate/10-incident-postmortem";
 
+import { project as a00 } from "./advanced/00-investment-advisor";
 import { project as a01 } from "./advanced/01-hiring-pipeline";
 import { project as a02 } from "./advanced/02-news-factchecker";
 import { project as a03 } from "./advanced/03-price-intel";
@@ -38,7 +39,7 @@ import { project as a10 } from "./advanced/10-energy-optimizer";
 export const PROJECTS: ProjectDef[] = [
   b00, b01, b02, b03, b04, b05, b06, b07, b08, b09, b10,
   i00, i01, i02, i03, i04, i05, i06, i07, i08, i09, i10,
-  a01, a02, a03, a04, a05, a06, a07, a08, a09, a10,
+  a00, a01, a02, a03, a04, a05, a06, a07, a08, a09, a10,
 ];
 
 export function projectsByTier(tier: Tier): ProjectDef[] {

@@ -8,8 +8,10 @@ import { StatusChip } from "@/components/StatusChip";
 import { TierBadge } from "@/components/TierBadge";
 import { PipelineDiagram } from "@/components/PipelineDiagram";
 import { AgentArchDiagram } from "@/components/AgentArchDiagram";
+import { InvestmentArchDiagram } from "@/components/InvestmentArchDiagram";
 import { DemoPlayground } from "@/components/DemoPlayground";
 import { MultiAgentDemoPlayground } from "@/components/MultiAgentDemoPlayground";
+import { InvestmentAdvisorPlayground } from "@/components/InvestmentAdvisorPlayground";
 
 const VALID = new Set(TIER_ORDER);
 
@@ -98,7 +100,9 @@ export default async function ProjectPage({
 
       <section className="px-6 lg:px-12 py-10">
         <div className="max-w-6xl">
-          {project.slug === "devops-log-analyzer" ? (
+          {project.slug === "investment-advisor" ? (
+            <InvestmentAdvisorPlayground project={project} />
+          ) : project.slug === "devops-log-analyzer" ? (
             <MultiAgentDemoPlayground project={project} />
           ) : (
             <DemoPlayground project={project} />
@@ -116,7 +120,9 @@ export default async function ProjectPage({
               ARCHITECTURE
             </h2>
           </div>
-          {project.slug === "hate-speech-detector" ? (
+          {project.slug === "investment-advisor" ? (
+            <InvestmentArchDiagram accent={meta.accent} />
+          ) : project.slug === "hate-speech-detector" ? (
             <AgentArchDiagram accent={meta.accent} />
           ) : (
             <PipelineDiagram steps={project.pipeline} accent={meta.accent} />
