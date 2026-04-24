@@ -9,6 +9,7 @@ import { TierBadge } from "@/components/TierBadge";
 import { PipelineDiagram } from "@/components/PipelineDiagram";
 import { AgentArchDiagram } from "@/components/AgentArchDiagram";
 import { DemoPlayground } from "@/components/DemoPlayground";
+import { MultiAgentDemoPlayground } from "@/components/MultiAgentDemoPlayground";
 
 const VALID = new Set(TIER_ORDER);
 
@@ -97,7 +98,11 @@ export default async function ProjectPage({
 
       <section className="px-6 lg:px-12 py-10">
         <div className="max-w-6xl">
-          <DemoPlayground project={project} />
+          {project.slug === "devops-log-analyzer" ? (
+            <MultiAgentDemoPlayground project={project} />
+          ) : (
+            <DemoPlayground project={project} />
+          )}
         </div>
       </section>
 

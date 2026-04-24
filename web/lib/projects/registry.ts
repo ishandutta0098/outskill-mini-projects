@@ -12,6 +12,7 @@ import { project as b08 } from "./beginner/08-legal-simplifier";
 import { project as b09 } from "./beginner/09-interview-questions";
 import { project as b10 } from "./beginner/10-startup-validator";
 
+import { project as i00 } from "./intermediate/00-devops-log-analyzer";
 import { project as i01 } from "./intermediate/01-seo-blog-pipeline";
 import { project as i02 } from "./intermediate/02-support-ticket-resolver";
 import { project as i03 } from "./intermediate/03-competitor-intel";
@@ -36,7 +37,7 @@ import { project as a10 } from "./advanced/10-energy-optimizer";
 
 export const PROJECTS: ProjectDef[] = [
   b00, b01, b02, b03, b04, b05, b06, b07, b08, b09, b10,
-  i01, i02, i03, i04, i05, i06, i07, i08, i09, i10,
+  i00, i01, i02, i03, i04, i05, i06, i07, i08, i09, i10,
   a01, a02, a03, a04, a05, a06, a07, a08, a09, a10,
 ];
 
