@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700;900&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#141f00",
+                    "on-secondary-fixed-variant": "#454747",
+                    "tertiary-fixed": "#e3e2e3",
+                    "surface": "#121416",
+                    "tertiary": "#fbf9fb",
+                    "inverse-primary": "#4a6700",
+                    "outline": "#8d937c",
+                    "primary-fixed": "#bdf548",
+                    "on-surface": "#e2e2e5",
+                    "secondary-container": "#454747",
+                    "on-primary": "#253600",
+                    "primary": "#f3ffd3",
+                    "secondary": "#c6c6c7",
+                    "surface-container-highest": "#333537",
+                    "outline-variant": "#434936",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-primary-container": "#4c6a00",
+                    "tertiary-fixed-dim": "#c7c6c7",
+                    "surface-variant": "#333537",
+                    "primary-fixed-dim": "#a2d72b",
+                    "surface-container-low": "#1a1c1e",
+                    "on-tertiary-fixed": "#1b1c1d",
+                    "surface-bright": "#37393b",
+                    "on-tertiary": "#303032",
+                    "surface-tint": "#a2d72b",
+                    "background": "#121416",
+                    "surface-dim": "#121416",
+                    "inverse-on-surface": "#2f3133",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#c3c9b0",
+                    "primary-container": "#b8ef43",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-tertiary-fixed-variant": "#464748",
+                    "tertiary-container": "#deddde",
+                    "on-secondary": "#2f3131",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-high": "#282a2c",
+                    "on-secondary-container": "#b4b5b5",
+                    "on-tertiary-container": "#616162",
+                    "surface-container-lowest": "#0c0e10",
+                    "surface-container": "#1e2022",
+                    "inverse-surface": "#e2e2e5",
+                    "on-primary-fixed-variant": "#374e00",
+                    "on-background": "#e2e2e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "0.5rem",
+                    "gutter": "1.5rem",
+                    "container-max": "1280px",
+                    "md": "1.5rem",
+                    "lg": "2.5rem",
+                    "sm": "1rem",
+                    "xl": "4rem",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "code-sm": ["Fira Code"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "450"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .stage-bg {
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-[#08090A] text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<nav class="fixed top-0 w-full z-50 bg-[#08090A]/80 dark:bg-[#08090A]/90 backdrop-blur-md border-b border-[#333] flex justify-between items-center px-6 h-16">
+<div class="text-2xl font-black text-[#B8EF43] tracking-tighter uppercase font-['Space_Grotesk']">AGENT_ARCHIVE</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] font-medium tracking-tight">
+<a class="text-[#B8EF43] border-b-2 border-[#B8EF43] pb-1 hover:text-white transition-all active:scale-95 duration-200" href="#">Home</a>
+<a class="text-gray-400 dark:text-gray-500 hover:text-white hover:bg-[#1A1C1E] transition-all px-2 py-1 rounded active:scale-95 duration-200" href="#">Beginner</a>
+<a class="text-gray-400 dark:text-gray-500 hover:text-white hover:bg-[#1A1C1E] transition-all px-2 py-1 rounded active:scale-95 duration-200" href="#">Intermediate</a>
+<a class="text-gray-400 dark:text-gray-500 hover:text-white hover:bg-[#1A1C1E] transition-all px-2 py-1 rounded active:scale-95 duration-200" href="#">Advanced</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-gray-400 hover:text-[#B8EF43] transition-colors">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="text-gray-400 hover:text-[#B8EF43] transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full border border-[#333] overflow-hidden bg-[#1A1C1E]">
+<img alt="Developer Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a developer with tech-wear aesthetics in a dimly lit server room with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMrg_xlMfYEOYeEzofFucgGji9Asu2r7WWt4j2VO2IxR4_8eVo69_M67_k1m_SdRPfo55oW9iBYLtGkb6DtqoWhGerKD8STvgVUBYLWFimhiCdzIpqGl-jpnf8i946qU62-OUndQFtfrGZr8BWTc-EwmfQdeL08fjzARUKISa15ZyC9DD5eXueG2d2_lncSEmD_JLI2g3H6l_iIkWFyXlqhL_dHLQTYFrC-Oadg2xpcoD8KaEl8eQ2f6mvD2tVmWXs8wAFSTubSQwS"/>
+</div>
+</div>
+</nav>
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full w-64 bg-[#08090A] border-r border-[#333] z-40 pt-20">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-[#1A1C1E] border border-[#333] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#B8EF43]">memory</span>
+</div>
+<div>
+<h2 class="font-['Space_Grotesk'] text-[#B8EF43] font-black text-sm uppercase leading-none">AGENT_ARCHIVE</h2>
+<p class="text-[10px] text-gray-500 font-code-sm">V.1.0.4-STABLE</p>
+</div>
+</div>
+<button class="w-full mt-4 bg-[#B8EF43] text-[#08090A] font-label-caps py-3 rounded-sm transition-all hover:brightness-110 active:scale-95">
+                DEPLOY NEW AGENT
+            </button>
+</div>
+<nav class="flex-1 space-y-1 px-3">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#1A1C1E] text-[#B8EF43] border-r-4 border-[#B8EF43] font-['Space_Grotesk'] text-sm uppercase font-bold transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Overview
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-gray-300 hover:bg-[#2C2F33] font-['Space_Grotesk'] text-sm uppercase font-bold transition-all" href="#">
+<span class="material-symbols-outlined">school</span>
+                Beginner
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-gray-300 hover:bg-[#2C2F33] font-['Space_Grotesk'] text-sm uppercase font-bold transition-all" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                Intermediate
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-gray-300 hover:bg-[#2C2F33] font-['Space_Grotesk'] text-sm uppercase font-bold transition-all" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+                Advanced
+            </a>
+</nav>
+<div class="p-6 border-t border-[#333] space-y-4">
+<a class="flex items-center gap-3 text-gray-600 hover:text-[#B8EF43] font-['Space_Grotesk'] text-xs tracking-widest uppercase transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+                Documentation
+            </a>
+<a class="flex items-center gap-3 text-gray-600 hover:text-[#B8EF43] font-['Space_Grotesk'] text-xs tracking-widest uppercase transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">code</span>
+                Terminal
+            </a>
+</div>
+</aside>
+<main class="lg:pl-64 pt-16 min-h-screen flex flex-col">
+<section class="relative px-6 py-20 lg:py-32 overflow-hidden border-b border-[#333]">
+<div class="absolute inset-0 stage-bg opacity-20 pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#B8EF43]/5 to-transparent pointer-events-none"></div>
+<div class="max-w-4xl relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-[#B8EF43] animate-pulse"></span>
+<span class="font-label-caps text-[#B8EF43]">SYSTEM READY // ARCHIVE_INIT</span>
+</div>
+<h1 class="font-headline-xl text-white mb-6 uppercase tracking-tighter leading-tight">
+                    Engineered <span class="text-[#B8EF43]">Autonomous</span> Excellence.
+                </h1>
+<p class="font-body-lg text-gray-400 mb-10 max-w-2xl leading-relaxed">
+                    A curated high-fidelity showcase for Outskill developers. Documenting the evolution of machine logic from fundamental patterns to advanced autonomous systems.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#B8EF43] text-[#08090A] px-8 py-4 font-label-caps rounded-sm hover:brightness-110 transition-all active:scale-95">
+                        EXPLORE THE ARCHIVE
+                    </button>
+<button class="bg-transparent border border-white text-white px-8 py-4 font-label-caps rounded-sm hover:bg-white hover:text-[#08090A] transition-all active:scale-95">
+                        VIEW SOURCE CODE
+                    </button>
+</div>
+</div>
+</section>
+<section class="px-6 py-20 lg:px-12">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-white mb-2 uppercase tracking-tight">Project Tiers</h2>
+<p class="text-gray-500 font-body-md">Categorized by technical complexity and system architecture.</p>
+</div>
+<div class="hidden md:block h-[1px] flex-1 mx-12 bg-[#333]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative bg-[#1A1C1E] border border-[#333] p-8 transition-all hover:border-[#B8EF43] hover:-translate-y-2">
+<div class="mb-6 flex justify-between items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-[#B8EF43]/10 border border-[#B8EF43]/20 text-[#B8EF43]">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<span class="font-label-caps bg-[#B8EF43]/10 text-[#B8EF43] px-3 py-1 rounded-full">Beginner</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 uppercase text-2xl">Core Logic</h3>
+<p class="text-gray-500 font-body-md mb-8">Fundamental interaction patterns, simple API integrations, and clean UI execution.</p>
+<div class="h-40 rounded border border-[#333] overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img alt="Beginner Tier Visual" class="w-full h-full object-cover" data-alt="Close up of clean programming code on a monitor with soft green neon reflections and a minimalist interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN5LmPy-38GBZbqcPCjotqcmQEN220fIOD7d_Zhqn0Kr6I5m5doU_TKY4VLbWfcPcxMkh_w3DItqEZz6XTP5yPWzV8Jkybz4xpr7if_XzTFLP7nOj29_NowC-PrcchnZO-6BS2OVAQ5qM0AL9kQPennIn4geSY4ml2ces5PQ08-xSy735V4Gst_OlqOdU4MIlIfY_lIrkgBXF2Hv8_VzsF82xFGUrhQtHcsg1B-VDAUvw0C5HN5-NntxCSRJjy9Vankhbb_yEmI97r"/>
+</div>
+</div>
+<div class="group relative bg-[#1A1C1E] border border-[#333] p-8 transition-all hover:border-[#00FFFF] hover:-translate-y-2">
+<div class="mb-6 flex justify-between items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-[#00FFFF]/10 border border-[#00FFFF]/20 text-[#00FFFF]">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<span class="font-label-caps bg-[#00FFFF]/10 text-[#00FFFF] px-3 py-1 rounded-full">Intermediate</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 uppercase text-2xl">Neural Mesh</h3>
+<p class="text-gray-500 font-body-md mb-8">Complex state management, asynchronous data flows, and interactive visualizations.</p>
+<div class="h-40 rounded border border-[#333] overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img alt="Intermediate Tier Visual" class="w-full h-full object-cover" data-alt="Abstract network of glowing blue data nodes and fiber optic cables in a dark futuristic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdEUrPjs3hJAJi2nnMlFL-EmEEU1BVYk1Wwm-_tJElQhvO0LgkWmYN677Uuh2zntcYrjCVXrWvymcgh-Oyy7X0qo1QirRkfxw46CitY5BmvdgUEkt8GgZzK5h49LY7YV68o9HtHPJU5Xt1ct7UhVI0kW5D3LJTg3hIhhWOSRpLPYEU0s2yC4SiapJKQbfjyCkFm8mqkQdwU5LwZqZY--7twCKHeFgCPWAAwxLK0Ggx-nNIC1i5chnFMarsC5TKdIe9CjyPyF6KREvY"/>
+</div>
+</div>
+<div class="group relative bg-[#1A1C1E] border border-[#333] p-8 transition-all hover:border-[#FF00FF] hover:-translate-y-2">
+<div class="mb-6 flex justify-between items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-[#FF00FF]/10 border border-[#FF00FF]/20 text-[#FF00FF]">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<span class="font-label-caps bg-[#FF00FF]/10 text-[#FF00FF] px-3 py-1 rounded-full">Advanced</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 uppercase text-2xl">Singularity</h3>
+<p class="text-gray-500 font-body-md mb-8">Autonomous agent orchestration, high-concurrency architectures, and bleeding-edge tech stacks.</p>
+<div class="h-40 rounded border border-[#333] overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img alt="Advanced Tier Visual" class="w-full h-full object-cover" data-alt="High-tech circuitry and futuristic hardware components with vibrant magenta lighting and technical precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwIrlK4sCN0iGwps7EoK5Pl0V1DYkSHnEjp4Pbamo9ybRjiRfspKUI5uFrEXyrDlApv04qcVJOt83zAAs251wa6YbQGfD1M0lcPXtpHhsFYHU7OXWqTgDrdaGtRI3DHJ_ceSf3aAaNP4lNAtgoBTNI48r0vDPOLwpUbPLzVxvrwa6VHMxSj557yELaWEe7cw_zboFa8DHn0JMNMfVpEg4PwrHHtfSFN01pHsIxOUZr90SfVLVruV8ms3LwrTRS3sZ33aAzv7HVXYKJ"/>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-20 lg:px-12 bg-surface-container-lowest border-y border-[#333]">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="stage-bg p-8 rounded-sm border border-[#333] aspect-video flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/5 to-transparent"></div>
+<div class="bg-[#000000] border border-[#B8EF43]/50 p-6 rounded shadow-[0_0_30px_rgba(184,239,67,0.1)] w-full font-code-sm">
+<div class="flex gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-red-500"></div>
+<div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+</div>
+<p class="text-[#B8EF43] mb-2">$ deploy_agent --tier advanced</p>
+<p class="text-gray-400">Initializing archive protocols...</p>
+<p class="text-gray-400">[OK] Connection established.</p>
+<p class="text-[#00FFFF]">Fetching repository: outskill/singular-agent</p>
+<p class="text-gray-400">Injecting dependencies: [88% completed]</p>
+<p class="animate-pulse text-white">_</p>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-white mb-6 uppercase">Built for Autonomous Excellence</h2>
+<p class="font-body-lg text-gray-400 mb-8 leading-relaxed">
+                        Every project in the Agent Archive is more than just code. It's a testament to rigorous testing, scalable architecture, and the pursuit of digital perfection. Join the ranks of high-tier contributors.
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-white font-label-caps">
+<span class="material-symbols-outlined text-[#B8EF43]">check_circle</span>
+                            Optimized Execution Paths
+                        </li>
+<li class="flex items-center gap-3 text-white font-label-caps">
+<span class="material-symbols-outlined text-[#B8EF43]">check_circle</span>
+                            Scalable Micro-Architectures
+                        </li>
+<li class="flex items-center gap-3 text-white font-label-caps">
+<span class="material-symbols-outlined text-[#B8EF43]">check_circle</span>
+                            High-Fidelity Interaction Models
+                        </li>
+</ul>
+<button class="bg-[#B8EF43] text-[#08090A] px-8 py-4 font-label-caps rounded-sm hover:brightness-110 transition-all active:scale-95">
+                        LEARN MORE
+                    </button>
+</div>
+</div>
+</section>
+<footer class="bg-[#08090A] border-t border-[#333] flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full mt-auto">
+<div class="flex items-center gap-4 mb-6 md:mb-0">
+<span class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#B8EF43]">AGENT_ARCHIVE</span>
+<span class="text-gray-700 font-label-caps">© 2024 AGENT_ARCHIVE // BUILT FOR AUTONOMOUS EXCELLENCE</span>
+</div>
+<div class="flex gap-8 font-['Space_Grotesk'] text-xs tracking-widest uppercase">
+<a class="text-gray-700 hover:text-[#B8EF43] transition-all" href="#">System Status</a>
+<a class="text-gray-700 hover:text-[#B8EF43] transition-all" href="#">API</a>
+<a class="text-gray-700 hover:text-[#B8EF43] transition-all" href="#">Privacy</a>
+<a class="text-gray-700 hover:text-[#B8EF43] transition-all" href="#">Github</a>
+</div>
+</footer>
+</main>
+<nav class="lg:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-[#08090A] dark:bg-[#08090A] border-t border-[#333] z-50 shadow-2xl font-['Space_Grotesk'] text-[10px] uppercase font-bold">
+<a class="flex flex-col items-center justify-center text-[#B8EF43] bg-[#1A1C1E] rounded-md p-2 scale-110 duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+            Home
+        </a>
+<a class="flex flex-col items-center justify-center text-gray-600 p-2 hover:bg-[#1A1C1E] transition-all" href="#">
+<span class="material-symbols-outlined">layers</span>
+            Tiers
+        </a>
+<a class="flex flex-col items-center justify-center text-gray-600 p-2 hover:bg-[#1A1C1E] transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+            Source
+        </a>
+<a class="flex flex-col items-center justify-center text-gray-600 p-2 hover:bg-[#1A1C1E] transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+            User
+        </a>
+</nav>
+</body></html>
