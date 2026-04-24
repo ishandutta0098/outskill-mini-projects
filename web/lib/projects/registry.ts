@@ -1,5 +1,6 @@
 import type { ProjectDef, Tier } from "./schema";
 
+import { project as b00 } from "./beginner/00-hate-speech-detector";
 import { project as b01 } from "./beginner/01-resume-screener";
 import { project as b02 } from "./beginner/02-review-sentiment";
 import { project as b03 } from "./beginner/03-email-tone-rewriter";
@@ -34,7 +35,7 @@ import { project as a09 } from "./advanced/09-content-repurposer";
 import { project as a10 } from "./advanced/10-energy-optimizer";
 
 export const PROJECTS: ProjectDef[] = [
-  b01, b02, b03, b04, b05, b06, b07, b08, b09, b10,
+  b00, b01, b02, b03, b04, b05, b06, b07, b08, b09, b10,
   i01, i02, i03, i04, i05, i06, i07, i08, i09, i10,
   a01, a02, a03, a04, a05, a06, a07, a08, a09, a10,
 ];
