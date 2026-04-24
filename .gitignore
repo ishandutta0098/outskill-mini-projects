@@ -208,3 +208,77 @@ __marimo__/
 
 # Extra
 reference
+
+# ---------------------------------------------------------------------------
+# Node.js / Next.js (web/)
+# ---------------------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.*
+.yarn/install-state.gz
+
+# Build output
+.next/
+out/
+build/
+dist/
+
+# Next.js
+next-env.d.ts
+*.tsbuildinfo
+
+# Vercel / Turborepo
+.vercel
+.turbo
+
+# Local env files (keep .env.example committed)
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Test coverage
+coverage/
+
+# ---------------------------------------------------------------------------
+# OS
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Editors
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.vim/
+
+# ---------------------------------------------------------------------------
+# Local design / scratch
+# ---------------------------------------------------------------------------
+.scratch/
+*.local
+
+# ---------------------------------------------------------------------------
+# Negations — keep these tracked even though earlier patterns would ignore them
+# (Python distribution rules above match `lib/`, `build/`, `dist/` at any depth)
+# ---------------------------------------------------------------------------
+!web/lib/
+!web/lib/**
