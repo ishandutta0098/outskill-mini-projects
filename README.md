@@ -196,7 +196,7 @@ Same UI, real outputs.
 The web app is deployed to Vercel:
 
 - **Production**: [web-blue-sigma-80.vercel.app](https://web-blue-sigma-80.vercel.app)
-- **Project**: `ishan-duttas-projects-a63436c2/web`
+- **Project**: `ishan-duttas-projects-a63436c2/outskill-mini-projects`
 - **Framework**: Next.js (auto-detected)
 - **Region**: `iad1`
 
